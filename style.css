@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.rainbow {
+    width: 195px;
+    height: 87px;
+    cursor: pointer;
+    font-family: 'Parisienne', cursive;
+    font-size: 40px;
+    color: white;
+    border: none;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.6), inset -1px -1px 4px rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.rainbow:hover {
+    animation: rainbow 3s infinite linear;
+}
+
+@keyframes rainbow {
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.rainbow:focus {
+    outline: none;
+}
+
+#container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15%;
+}
+
+.greyBG {
+    background-color: rgba(42, 76, 78, 0.6);
+    border-radius: 4em;
+    margin-bottom: 7%;
+    width: 50%;
+}
+
+a {
+    font-family: 'Marck Script';
+    text-decoration: none;
+    text-align: right;
+    font-size: 3vw;
+}
+
+.background-color p {
+    color: #000;
+    font-family: 'montserrat';
+    font-size: 3vw;
+    font-weight: bold;
+    letter-spacing: 0.5vw;
+    /* max-width: 700px; */
+    text-align: center;
+    background: rgba(255, 253, 160, 1);
+    background: -webkit-linear-gradient(left, #00ffff 0%, #97fba0 25%, #97b1fb 50%, #00ffff 100%) repeat;
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-animation-name: masked-animation;
+    -webkit-animation-duration: 50s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes masked-animation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -8000px -3000px;
+    }
+}
+
+/* portrait */
+@media (orientation: portrait) {
+    #container {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rainbow {
+        width: 383px;
+        height: 120px;
+    }
+
+    #container>div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .background-color p {
+        text-align: center;
+    }
+
+    .greyBG {
+        background-color: rgba(42, 76, 78, 0.6);
+        border-radius: 3em;
+        margin-bottom: 10%;
+        width: 50%;
+    }
+
+    a {
+        font-family: 'Marck Script';
+        text-decoration: none;
+        text-align: right;
+        font-size: 6vw;
+    }
+}
