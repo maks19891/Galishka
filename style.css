@@ -115,7 +115,7 @@ a {
 
     .rainbow {
         width: 383px;
-        height: 120px;
+        height: 100px;
     }
 
     #container>div {
@@ -131,13 +131,13 @@ a {
         background-color: rgba(42, 76, 78, 0.6);
         border-radius: 3em;
         margin-bottom: 10%;
-        width: 50%;
+        width: 60%;
     }
 
     a {
         font-family: 'Marck Script';
         text-decoration: none;
         text-align: right;
-        font-size: 6vw;
+        font-size: 5.5vw;
     }
 }
